@@ -41,16 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Lanche.cs" />
-    <Compile Include="Pastel.cs" />
-    <Compile Include="Pizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Refeicao.cs" />
-    <Compile Include="StatusConcluido.cs" />
-    <Compile Include="StatusEmAberto.cs" />
-    <Compile Include="StatusEmPreparo.cs" />
-    <Compile Include="StatusPedido.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

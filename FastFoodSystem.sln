@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFoodSystem", "FastFoodSystem\FastFoodSystem.csproj", "{05F12DC1-7775-4518-8C62-C62D29497E59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{345C4935-3644-4B52-B827-54F70A4A5EB6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{05F12DC1-7775-4518-8C62-C62D29497E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05F12DC1-7775-4518-8C62-C62D29497E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05F12DC1-7775-4518-8C62-C62D29497E59}.Release|Any CPU.Build.0 = Release|Any CPU
-		{345C4935-3644-4B52-B827-54F70A4A5EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{345C4935-3644-4B52-B827-54F70A4A5EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{345C4935-3644-4B52-B827-54F70A4A5EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{345C4935-3644-4B52-B827-54F70A4A5EB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
