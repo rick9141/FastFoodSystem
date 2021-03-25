@@ -1,0 +1,82 @@
+﻿@model FastFoodSystem.Models.Pedido
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Cpf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Cpf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Refeicao.IdRefeicao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Refeicao.IdRefeicao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Refeicao.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Refeicao.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormaPag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormaPag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusPedido.IdStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusPedido.IdStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusPedido.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusPedido.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdPedido }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

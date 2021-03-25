@@ -28,7 +28,7 @@ namespace FastFoodSystem.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public  ActionResult Create([Bind(Include = "IdPedido,Cliente, Refeicao, StatusPedido")] Pedido pedido)
+        public  ActionResult Create([Bind(Include = "IdPedido,Cliente, Refeicao, FormaPag, StatusPedido")] Pedido pedido)
         {
             if (ModelState.IsValid)
             {
@@ -36,6 +36,7 @@ namespace FastFoodSystem.Controllers
                 pedido.Cliente = db.Clientes.First(r => r.Nome == pedido.Cliente.Nome);
                 pedido.Refeicao = db.Refeicaos.FirstOrDefault(r => r.IdRefeicao == pedido.Refeicao.IdRefeicao);
                 pedido.StatusPedido = db.StatusPedidos.FirstOrDefault(r => r.IdStatus == pedido.StatusPedido.IdStatus);
+                
                 db.Pedidos.Add(pedido);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -64,6 +65,26 @@ namespace FastFoodSystem.Controllers
                 return RedirectToAction("Index");
             }
             return View(pedido);
+        }
+
+        public ActionResult Details(int id)
+        {
+            return View(db.Pedidos.First(d => d.IdPedido == id));
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            return View(db.Pedidos.First(d => d.IdPedido == id));
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirm(int id)
+        {
+            db.Pedidos.Remove(db.Pedidos.First(d => d.IdPedido == id));
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
