@@ -1,0 +1,81 @@
+﻿@model IEnumerable<FastFoodSystem.Models.Pedido>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Cpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Refeicao.IdRefeicao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Refeicao.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Refeicao.Valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormaPag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusPedido.IdStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusPedido.Descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPedido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Cpf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Refeicao.IdRefeicao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Refeicao.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Refeicao.Valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormaPag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusPedido.IdStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusPedido.Descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdPedido }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdPedido }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdPedido })
+        </td>
+    </tr>
+}
+
+</table>
