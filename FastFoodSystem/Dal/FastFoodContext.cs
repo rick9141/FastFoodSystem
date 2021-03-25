@@ -14,5 +14,9 @@ namespace FastFoodSystem.Dal
             }
 
         public DbSet<Cliente> Clientes { set; get; }
+
+        public DbSet<Refeicao> Refeicoes { set; get; }
+        public DbSet<StatusPedido> StatusPedidos { set; get; }
+
     }
 }

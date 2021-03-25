@@ -128,19 +128,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RefeicaoController.cs" />
+    <Compile Include="Controllers\StatusPedidoController.cs" />
     <Compile Include="Dal\FastFoodContext.cs" />
     <Compile Include="Dal\FastFoodInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\Lanche.cs" />
-    <Compile Include="Models\Pastel.cs" />
-    <Compile Include="Models\Pizza.cs" />
     <Compile Include="Models\Refeicao.cs" />
-    <Compile Include="Models\StatusConcluido.cs" />
-    <Compile Include="Models\StatusEmAberto.cs" />
-    <Compile Include="Models\StatusEmPreparo.cs" />
     <Compile Include="Models\StatusPedido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -185,6 +181,10 @@
     <Content Include="Views\Cliente\Edit.cshtml" />
     <Content Include="Views\Cliente\Details.cshtml" />
     <Content Include="Views\Cliente\Delete.cshtml" />
+    <Content Include="Views\Refeicao\Create.cshtml" />
+    <Content Include="Views\Refeicao\Index.cshtml" />
+    <Content Include="Views\StatusPedido\Index.cshtml" />
+    <Content Include="Views\StatusPedido\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
