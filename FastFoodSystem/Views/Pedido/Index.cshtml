@@ -13,31 +13,31 @@
 <table class="table table-striped">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.IdPedido)
+            Id Pedido
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Cliente.Cpf)
+            CPF
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Cliente.Nome)
+            Nome
+        </th>
+        @*<th>
+            Id Refeicao
+        </th>*@
+        <th>
+            Tipo Refeição
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Refeicao.IdRefeicao)
+            Valor
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Refeicao.Tipo)
+            Forma Pag.
         </th>
+        @*<th>
+            Id Status
+        </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.Refeicao.Valor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FormaPag)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StatusPedido.IdStatus)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StatusPedido.Descricao)
+            Status
         </th>
         <th></th>
     </tr>
@@ -53,9 +53,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Cliente.Nome)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Refeicao.IdRefeicao)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Refeicao.Tipo)
         </td>
@@ -65,16 +65,16 @@
         <td>
             @Html.DisplayFor(modelItem => item.FormaPag)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.StatusPedido.IdStatus)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.StatusPedido.Descricao)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" })
+            @Html.ActionLink("Status", "Edit", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
+            @Html.ActionLink("Remover", "Delete", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" })
         </td>
     </tr>
 }

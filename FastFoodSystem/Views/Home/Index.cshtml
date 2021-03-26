@@ -4,15 +4,10 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Sistema de Gerenciamento de FastFoods</h1>
-    <p class="lead">Sistema em versão MVP  v.0.0.1....</p>
-
-</div>
 
 
 <div class="row justify-content-md-center">
-    
+
     <p>
         <div class="col-md-4">
             <input class="btn btn-primary btn-lg" type="button" value="Gerencia Clientes" onclick="viewIframe()" />
@@ -21,22 +16,15 @@
             <input class="btn btn-primary btn-lg" type="button" value="Gerencia Refeições" onclick="viewIframe2();" />
         </div>
 </div>
-    <div>
-        <iframe id="iframe" src="~/Cliente/Index" width="1000" height="500" style="border: none; display:none;"></iframe>
-        <iframe id="iframe2" src="~/Refeicao/Index" width="1000" height="500" style="border: none; display: none;"></iframe>
-    </div>
+<br />
+<div class="jumbotron">
+    <h1>Sistema de Gerenciamento de FastFoods</h1>
+    <p class="lead">Sistema em versão MVP  v.0.0.1....</p>
 
-
-@*<div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-            </div>
-    </div>*@
+</div>
+<div>
+    <iframe id="iframe" src="~/Cliente/Index" width="1000" height="500" style="border: none; display:none;"></iframe>
+    <iframe id="iframe2" src="~/Refeicao/Index" width="1000" height="500" style="border: none; display: none;"></iframe>
+</div>
 
 
