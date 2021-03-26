@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="Controllers\RefeicaoController.cs" />
     <Compile Include="Controllers\StatusPedidoController.cs" />
     <Compile Include="Dal\FastFoodContext.cs" />
@@ -138,6 +139,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Refeicao.cs" />
     <Compile Include="Models\StatusPedido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -279,6 +281,11 @@
     <Content Include="Views\Refeicao\Index.cshtml" />
     <Content Include="Views\StatusPedido\Index.cshtml" />
     <Content Include="Views\StatusPedido\Create.cshtml" />
+    <Content Include="Views\Pedido\Create.cshtml" />
+    <Content Include="Views\Pedido\Index.cshtml" />
+    <Content Include="Views\Pedido\Edit.cshtml" />
+    <Content Include="Views\Pedido\Details.cshtml" />
+    <Content Include="Views\Pedido\Delete.cshtml" />
     <Content Include="Views\Administrativo\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />

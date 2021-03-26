@@ -29,7 +29,18 @@ namespace FastFoodSystem.Dal
                 new Refeicao{IdRefeicao = 3, Tipo = "Pastel", Valor = "12.00"},
             };
 
-            refeicoes.ForEach(d => context.Refeicoes.Add(d));
+            refeicoes.ForEach(d => context.Refeicaos.Add(d));
+            context.SaveChanges();
+
+            // StatusPedidos
+            var status = new List<StatusPedido>
+            {
+                new StatusPedido{IdStatus = 1, Descricao = "Em aberto"},
+                new StatusPedido{IdStatus = 2, Descricao = "Em Preparo"},
+                new StatusPedido{IdStatus = 3, Descricao = "Concluído"},
+            };
+
+            status.ForEach(d => context.StatusPedidos.Add(d));
             context.SaveChanges();
 
 

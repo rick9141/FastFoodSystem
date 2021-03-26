@@ -15,7 +15,7 @@ namespace FastFoodSystem.Controllers
         // GET: Refeicao
         public ActionResult Index()
         {
-            return View(db.Refeicoes.ToList());
+            return View(db.Refeicaos.ToList());
         }
 
         ///Cadastra Refeição
@@ -30,7 +30,7 @@ namespace FastFoodSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Refeicoes.Add(refeicao);
+                db.Refeicaos.Add(refeicao);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
