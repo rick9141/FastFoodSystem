@@ -3,13 +3,14 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<br />
+<h2>Pedidos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Efetuar novo Pedido", "Create", null, new { @class = "btn btn-primary btn-lg" })
 </p>
-<table class="table">
+<h4>Ultimos pedidos efetuados</h4>
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.IdPedido)
@@ -71,9 +72,9 @@
             @Html.DisplayFor(modelItem => item.StatusPedido.Descricao)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdPedido }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdPedido }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdPedido })
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" })
         </td>
     </tr>
 }
