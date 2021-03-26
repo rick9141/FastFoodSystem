@@ -4,20 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+
+
+
+<h2>Clientes</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Cadastrar Novo", "Create", null, new { @class = "btn btn-primary btn-lg" })
+    
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
-        <th>
+        <th scope="col">
             @Html.DisplayNameFor(model => model.Cpf)
-        </th>
-        <th>
+        </th scope="col">
+        <th scope="col">
             @Html.DisplayNameFor(model => model.Nome)
         </th>
-        <th>
+        <th scope="col">
             @Html.DisplayNameFor(model => model.Telefone)
         </th>
         <th></th>
@@ -35,9 +39,9 @@
             @Html.DisplayFor(modelItem => item.Telefone)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }, new { @class = "btn btn-primary btn-sm" }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.Id }, new { @class = "btn btn-primary btn-sm" }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.Id }, new { @class = "btn btn-primary btn-sm" })
         </td>
     </tr>
 }
