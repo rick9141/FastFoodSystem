@@ -8,70 +8,70 @@
 <h2>Novo Pedido</h2>
 
 
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
-            <div class="form-horizontal">
-                <h4>Pedido</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-horizontal">
+        <h4>Pedido</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-                @*Cpf*@
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Cliente.Cpf, "CPF", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Cliente.Cpf, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Cliente.Cpf, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                @*Nome*@
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Cliente.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Cliente.Nome, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Cliente.Nome, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                @*Id Refeição*@
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Refeicao.IdRefeicao, "Selecionar Refeição", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.DropDownListFor(model => model.Refeicao.IdRefeicao, (IEnumerable<SelectListItem>)ViewData["RefeicaoList"], "--Select--", htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.Refeicao.IdRefeicao, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                @* Forma de Pagamento*@
-                <div class="form-group">
-                    @Html.LabelFor(model => model.FormaPag, "Forma de Pagamento", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.FormaPag, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.FormaPag, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                @*IdStatus*@
-                <div class="form-group">
-                    @Html.LabelFor(model => model.StatusPedido.IdStatus, "Status Pedido", htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.DropDownListFor(model => model.StatusPedido.IdStatus, (IEnumerable<SelectListItem>)ViewData["StatusList"], "--Select--", htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.StatusPedido.IdStatus, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-lg-12">
-                        <input type="submit" value="Finalizar Pedido" class="btn btn-outline-danger" />
-                    </div>
-                </div>
+        @*Cpf*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cliente.Cpf, "CPF", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Cliente.Cpf, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Cliente.Cpf, "", new { @class = "text-danger" })
             </div>
-        }
-        <div>
-            @Html.ActionLink("Voltar a pagina anterior", "Index")
         </div>
+
+        @*Nome*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cliente.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Cliente.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Cliente.Nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*Id Refeição*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.Refeicao.IdRefeicao, "Selecionar Refeição", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Refeicao.IdRefeicao, (IEnumerable<SelectListItem>)ViewData["RefeicaoList"], "--Select--", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Refeicao.IdRefeicao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @* Forma de Pagamento*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.FormaPag, "Forma de Pagamento", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FormaPag, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FormaPag, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*IdStatus*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.StatusPedido.IdStatus, "Status Pedido", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.StatusPedido.IdStatus, (IEnumerable<SelectListItem>)ViewData["StatusList"], "--Select--", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.StatusPedido.IdStatus, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-lg-12">
+                <input type="submit" value="Finalizar Pedido" class="btn btn-outline-danger" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("Voltar a pagina anterior", "Index")
+</div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

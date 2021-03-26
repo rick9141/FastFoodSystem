@@ -22,8 +22,8 @@
             Nome
         </th>
         @*<th>
-            Id Refeicao
-        </th>*@
+                Id Refeicao
+            </th>*@
         <th>
             Tipo Refeição
         </th>
@@ -34,49 +34,50 @@
             Forma Pag.
         </th>
         @*<th>
-            Id Status
-        </th>*@
+                Id Status
+            </th>*@
         <th>
             Status
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IdPedido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cliente.Cpf)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cliente.Nome)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Refeicao.IdRefeicao)
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.Refeicao.Tipo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Refeicao.Valor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FormaPag)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.StatusPedido.IdStatus)
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.StatusPedido.Descricao)
-        </td>
-        <td>
-            @Html.ActionLink("Status", "Edit", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
-            @Html.ActionLink("Remover", "Delete", new { id=item.IdPedido }, new { @class = "btn btn-primary btn-sm" })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Nome)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Refeicao.IdRefeicao)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Refeicao.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Refeicao.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormaPag)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.StatusPedido.IdStatus)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusPedido.Descricao)
+            </td>
+            <td>
+                @Html.ActionLink("Status", "Edit", new { id = item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.IdPedido }, new { @class = "btn btn-primary btn-sm" }) |
+                @Html.ActionLink("Remover", "Delete", new { id = item.IdPedido }, new { @class = "btn btn-primary btn-sm" })
+            </td>
+        </tr>
+    }
 
 </table>

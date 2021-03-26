@@ -1,9 +1,6 @@
 ﻿using FastFoodSystem.Dal;
 using FastFoodSystem.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace FastFoodSystem.Controllers
@@ -41,7 +38,7 @@ namespace FastFoodSystem.Controllers
             return View(cliente);
         }
 
-         ///Edita Cliente puxa por pk
+        ///Edita Cliente puxa por pk
         public ActionResult Edit(int id)
         {
             return View(db.Clientes.First(d => d.Id == id));
@@ -63,7 +60,7 @@ namespace FastFoodSystem.Controllers
             return View(cliente);
         }
 
-       ///Detalhes de um certo cadastro puxa pela primary key (id)
+        ///Detalhes de um certo cadastro puxa pela primary key (id)
         public ActionResult Details(int id)
         {
             return View(db.Clientes.First(d => d.Id == id));

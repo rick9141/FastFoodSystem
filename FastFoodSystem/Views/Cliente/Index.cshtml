@@ -11,13 +11,13 @@
 
 <p>
     @Html.ActionLink("Cadastrar Novo", "Create", null, new { @class = "btn btn-primary btn-lg" })
-    
+
 </p>
 <table class="table table-striped">
     <tr>
         <th scope="col">
             @Html.DisplayNameFor(model => model.Cpf)
-        </th scope="col">
+        </th>
         <th scope="col">
             @Html.DisplayNameFor(model => model.Nome)
         </th>
@@ -27,23 +27,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cpf)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefone)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id }, new { @class = "btn btn-primary btn-sm" }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.Id }, new { @class = "btn btn-primary btn-sm" }) |
-            @Html.ActionLink("Excluir", "Delete", new { id=item.Id }, new { @class = "btn btn-primary btn-sm" })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+            </td>
+        </tr>
+    }
 
 </table>
